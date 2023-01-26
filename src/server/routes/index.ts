@@ -7,6 +7,6 @@ route.get('/', (_, res) => {
   return res.send('Oi, tudo bemm!!!!')
 })
 
-route.post('/cidades', CidadesController.create)
+route.post('/cidades', CidadesController.createValidation, CidadesController.create)
 
 export { route }
